@@ -1,0 +1,29 @@
+.layoutMode{
+    display: flex;
+    width: calc(100% - 800px);
+    align-items: center;
+    justify-content: flex-start;
+    padding: 1.75rem 0 0;
+}
+.layoutMode label{
+    font-size:.95rem;
+    display: inline-flex;
+    flex-direction: column;
+    color:#4b4b4b;
+}
+.layoutMode select{
+  outline: none;
+  border:none;
+  border-bottom: 1px solid #dcdee0;
+  color:#8f8f8f;
+  padding: 0.25em 0.5em 0.25rem 0;
+  font-size:.85rem;
+  cursor: pointer;
+  line-height: 1.1;
+  background-color: transparent;
+}
+@media(max-width:768px){
+    .layoutMode{
+        display: none;
+    }
+}

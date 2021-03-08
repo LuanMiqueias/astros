@@ -4,11 +4,11 @@ import styles from "../styles/components/Gallery.module.css";
 import Column from "./Column";
 
 interface IProps {
-  dataImages: IDadoss;
+  dataImages: IDados;
   columns: number;
 }
-interface IDadoss {
-  hits: [IPropsImages];
+interface IDados {
+  hits: IPropsImages[];
 }
 interface IPropsImages {
   webformatURL: string;
