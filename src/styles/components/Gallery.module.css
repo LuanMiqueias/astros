@@ -1,0 +1,12 @@
+.gallery{
+    width: 100%;
+    display: grid;
+    grid-template-columns:repeat(3, 1fr);
+    grid-row: auto;
+    justify-content: flex-start;
+    gap:12px;
+    align-items: flex-start;
+    margin-top:128px;
+}
+
+
