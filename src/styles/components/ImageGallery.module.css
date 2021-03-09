@@ -1,6 +1,5 @@
 .ImageGallery{
     width: 100%;
-    max-width: 320px;
     height: 100%;
     border-radius: 16px;
     object-fit: cover;
@@ -13,4 +12,8 @@
 .ImageGallery:hover{
     filter: brightness(70%);
 }
-
+@media(max-width:768px){
+    .ImageGallery{
+       max-width: 360px;
+    }
+}
