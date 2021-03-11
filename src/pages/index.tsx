@@ -56,12 +56,12 @@ export default function Home() {
     pageHeight =
       document.documentElement.scrollHeight -
       document.documentElement.clientHeight;
-    if (scroll > pageHeight - 50 && scroll > 0) {
+    if (scroll > pageHeight + 50 && scroll > 0) {
       if (dataGallery.totalHits >= dataGallery.hits.length) {
         (async () => {
           setLoading(true);
           const responce = await fetch(
-            `https://pixabay.com/api/?key=20316077-4245a7498135799a2f3cd25e2&q=astronomy&safesearch=true&page=${pagina}&category=science`
+            `https://pixabay.com/api/?key=${process.env.NEXT_PUBLIC_API_KEY}&q=astronomy&safesearch=true&page=${pagina}&category=science`
           );
           const data: IDados = await responce.json();
           if (responce.status !== 200) {
