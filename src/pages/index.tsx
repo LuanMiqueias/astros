@@ -80,8 +80,9 @@ export default function Home() {
   React.useEffect(() => {
     (async () => {
       setLoading(true);
+
       const responce = await fetch(
-        `https://pixabay.com/api/?key=20316077-4245a7498135799a2f3cd25e2&q=astronomy&safesearch=true&page=${pagina}&category=science`
+        `https://pixabay.com/api/?key=${process.env.NEXT_PUBLIC_API_KEY}&q=astronomy&safesearch=true&page=${pagina}&category=science`
       );
       setLoading(false);
       if (responce.status !== 200) {

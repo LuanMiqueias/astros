@@ -17,7 +17,9 @@ const LayoutMode = ({ columns, setColumns }: IProps) => {
           <option disabled>Escolha um modo</option>
           <option value={1}>Uma coluna</option>
           <option value={2}>Duas colunas</option>
-          <option value={3}>Três colunas</option>
+          <option value={3} selected={true}>
+            Três colunas
+          </option>
         </select>
       </label>
     </div>

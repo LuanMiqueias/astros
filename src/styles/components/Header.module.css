@@ -16,6 +16,9 @@
     align-items: center;
     justify-content: space-between;
 }
+.header img{
+    cursor: pointer;
+}
 .header nav a{
     display: flex;
     align-items: center;
