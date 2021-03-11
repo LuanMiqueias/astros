@@ -56,7 +56,7 @@ export default function Home() {
     pageHeight =
       document.documentElement.scrollHeight -
       document.documentElement.clientHeight;
-    if (scroll > pageHeight + 50 && scroll > 0) {
+    if (scroll > pageHeight - 50 && scroll > 0) {
       if (dataGallery.totalHits >= dataGallery.hits.length) {
         (async () => {
           setLoading(true);
