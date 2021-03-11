@@ -1,0 +1,101 @@
+.ModalImage{
+    display: inline-flex;
+    border-radius: 5px;
+    max-width: 80vw;
+    animation-delay: .3s;
+    background-color: transparent;
+}
+.ModalImage .image{
+    height: 500px;
+    max-width: 40vw;
+    margin:0;
+    object-fit: cover;
+    z-index: 100;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    box-shadow: 10px 0px 20px -10px rgba(0, 0, 0, 0.6);
+}
+
+.ModalDescription{
+    box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.6);
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    padding: 16px 16px 16px;
+    background-color: #fff;
+    opacity: 0;
+    transform: translateX(-50%) scaleX(1);
+    animation:showInfoModal .3s ease forwards;
+    animation-delay: .2s;
+}
+.ModalDescription header{
+    width: 100%;
+    height: 32px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+.ModalDescription header > span{
+    font-size: .88rem;
+    display: block;
+    font-weight: 300;
+}
+.ModalDescription header > img{
+    cursor: pointer;
+    transition: all .2s;
+    padding: 2px;
+}
+.ModalDescription header > img:hover{
+    transform:scale(.8)
+}
+.ModalDescription .ModalInfos{
+    padding: 8px 44px 16px 8px;
+}
+.ModalDescription .ModalInfos h1{
+    font-size: 1.875rem;
+    position: relative;
+}
+.ModalDescription .ModalInfos h1::before{
+    content: '';
+    width: 18px;
+    height: 18px;
+    background: #d4df42;
+    border-radius: 20px;
+    position: absolute;
+    bottom: 5px;
+    left:-3px;
+    z-index: -1;
+}
+.ModalDescription .ModalInfos p{
+    font-weight: 300;
+    font-size: 1.125rem;
+    line-height: 1.5rem;
+    padding-left: 8px;
+    margin-top:8px
+}
+@keyframes showInfoModal{
+    to{
+    opacity: initial;
+    transform: initial;
+    }
+}
+@media(max-width:768px){
+    .ModalImage{
+        display: flex;
+        max-width: 100%;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+    }
+    .ModalImage .image{
+        width: 100%;
+    height: 50vh;
+    max-width: initial;
+
+    }
+    .ModalDescription{
+        min-height: 50vh;
+        transform: translateY(-25%) translateX(0%);
+        padding-bottom: 88px;
+
+    }
+}

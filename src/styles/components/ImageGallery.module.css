@@ -1,14 +1,13 @@
 .ImageGallery{
     width: 100%;
-    height: 100%;
     border-radius: 16px;
     object-fit: cover;
     object-position: center;
-    transition: all 0.1s;
     cursor: pointer;
     transition: all .2s;
     flex:1;
 }
+
 .ImageGallery:hover{
     filter: brightness(70%);
 }
@@ -17,3 +16,4 @@
        max-width: 360px;
     }
 }
+

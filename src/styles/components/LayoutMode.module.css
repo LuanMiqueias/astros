@@ -13,6 +13,8 @@
 }
 .layoutMode select{
   outline: none;
+  appearance: none;
+  -moz-appearance:none;
   border:none;
   border-bottom: 1px solid #dcdee0;
   color:#8f8f8f;

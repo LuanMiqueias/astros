@@ -1,5 +1,5 @@
 // import styles from "../styles/components/Header.module.css";
-import React from "react";
+import React, { ReactNode } from "react";
 import styles from "../styles/components/Gallery.module.css";
 import Column from "./Column";
 
@@ -36,7 +36,8 @@ const Gallery: React.FC<IProps> = ({ dataImages, columns }) => {
       style={{ gridTemplateColumns: `repeat(${columns}, 1fr)` }}
     >
       {arrayColunm.map((item, index) => {
-        return <Column data={item} key={`column_${index}`} />;
+        const random = Math.floor(Math.random() * 99999);
+        return <Column data={item} key={`column_${index + random}`} />;
       })}
     </div>
   );
